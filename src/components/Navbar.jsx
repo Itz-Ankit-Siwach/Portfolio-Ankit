@@ -104,7 +104,7 @@ export default function Navbar() {
         {/* Right Action: Download Resume Button */}
         <div className="nav-actions">
           <a
-            href="/resume.pdf"
+            href="/assets/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="resume-nav-btn"
@@ -153,7 +153,7 @@ export default function Navbar() {
               })}
 
               <a
-                href="/resume.pdf"
+                href="/assets/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary mobile-resume-btn"

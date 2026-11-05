@@ -112,7 +112,7 @@ export default function Hero() {
               <span>+91 7206679930</span>
             </a>
             <a
-              href="/resume.pdf"
+              href="/assets/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="secondary-link resume-link"
