@@ -1,0 +1,335 @@
+.experience-section {
+  padding: 6.5rem 1.5rem;
+  position: relative;
+}
+
+.experience-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Timeline central vertical line */
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  bottom: 20px;
+  left: 24px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-primary) 0%, rgba(34, 211, 238, 0.4) 60%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+/* Timeline Node */
+.timeline-node {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.node-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-secondary);
+  font-size: 1.1rem;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+.current-company .node-icon-box {
+  border-color: var(--accent-secondary);
+  color: var(--accent-secondary);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+}
+
+.node-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent-secondary);
+  animation: pulse-node 2.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes pulse-node {
+  0% { transform: scale(0.9); opacity: 1; }
+  70% { transform: scale(1.4); opacity: 0; }
+  100% { transform: scale(0.9); opacity: 0; }
+}
+
+/* Experience Card */
+.exp-card {
+  padding: 2.25rem 2.5rem;
+  background: var(--gradient-card);
+}
+
+.exp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.company-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.company-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.current-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #080B14;
+  background: var(--accent-secondary);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.progression-pill {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent-secondary);
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.role-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent-secondary);
+}
+
+.linkedin-verify-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: #CBD5E1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.linkedin-verify-btn:hover {
+  color: #fff;
+  border-color: var(--accent-primary);
+  background: rgba(139, 92, 246, 0.2);
+}
+
+/* Meta grid */
+.exp-meta-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.825rem;
+  color: #CBD5E1;
+}
+
+.meta-icon {
+  color: var(--accent-secondary);
+}
+
+.meta-label {
+  color: #94A3B8;
+}
+
+.meta-val {
+  color: #F8FAFC;
+}
+
+.location-tag {
+  margin-top: 0.35rem;
+}
+
+/* Skills associated in exp - Uniformly styled & highlighted */
+.exp-skills-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skills-heading {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94A3B8;
+  letter-spacing: 0.08em;
+}
+
+.skills-badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  transition: all 0.2s ease;
+}
+
+.skill-badge.highlight {
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  color: #F8FAFC;
+  box-shadow: 0 2px 10px rgba(139, 92, 246, 0.15);
+}
+
+.skill-badge.highlight:hover {
+  background: rgba(139, 92, 246, 0.22);
+  border-color: var(--accent-secondary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.skill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-secondary);
+  box-shadow: 0 0 8px var(--accent-secondary);
+}
+
+/* Infogain Career Progression Stepper */
+.career-progression-stepper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.career-progression-stepper::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 5px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.progression-step {
+  position: relative;
+}
+
+.step-marker {
+  position: absolute;
+  top: 6px;
+  left: -1.75rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  border: 2px solid var(--bg-primary);
+  box-shadow: 0 0 10px var(--accent-primary);
+}
+
+.marker-initial {
+  background: #64748B;
+  box-shadow: none;
+}
+
+.step-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.role-initial {
+  color: #F8FAFC;
+}
+
+.type-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  color: #CBD5E1;
+}
+
+.step-date {
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+  .experience-timeline::before {
+    left: 16px;
+  }
+  .timeline-item {
+    grid-template-columns: 36px 1fr;
+    gap: 1rem;
+  }
+  .timeline-node {
+    width: 36px;
+    height: 36px;
+  }
+  .node-icon-box {
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+  }
+  .exp-card {
+    padding: 1.5rem 1.25rem;
+  }
+}
